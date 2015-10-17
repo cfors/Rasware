@@ -7,18 +7,20 @@ tBoolean blink_on = true;
 
 void blink(void) {
     SetPin(PIN_F3, blink_on);
+    SetPin(PIN_F1, blink_on);
     blink_on = !blink_on;
+    
 }
 
 
 // The 'main' function is the entry point of the program
 int main(void) {
     // Initialization code can go here
-    CallEvery(blink, 0, 0.5);
+    CallEvery(blink, 0,.27);
     
     while (1) {
         // Runtime code can go here
-        Printf("Hello World!\n");
-        
+      Printf("Hello World!\n");
+    
     }
 }
