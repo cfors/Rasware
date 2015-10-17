@@ -1,13 +1,12 @@
-#include <RASLib/inc/common.h>
-#include <RASLib/inc/gpio.h>
-#include <RASLib/inc/time.h>
-
+#include <RASLib/inc/common.h> #include <RASLib/inc/gpio.h> #include <RASLib/inc/time.h> 
 // Blink the LED to show we're on
 tBoolean blink_on = true;
 
 void blink(void) {
+    SetPin(PIN_F3, blink_on);
     SetPin(PIN_F1, blink_on);
     blink_on = !blink_on;
+    
 }
 
 
@@ -18,7 +17,7 @@ int main(void) {
     
     while (1) {
         // Runtime code can go here
-        Printf("Hello World!\n");
-        
+      Printf("Hello World!\n");
+    
     }
 }
